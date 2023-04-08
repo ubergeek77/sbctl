@@ -110,7 +110,7 @@ func NewBundle() (bundle *Bundle, err error) {
 
 	stub, err := GetEfistub()
 	if err != nil {
-		return nil, fmt.Errorf("no EFISTUB file found. Please install systemd-boot or gummiboot! %v", err)
+		stub = ""
 	}
 
 	bundle = &Bundle{
